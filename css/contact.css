@@ -1,0 +1,136 @@
+:root{
+    --color-primary:#6c63ff;
+    --color-success:#00bf8e;
+    --color-warning:#f7c94b;
+    --color-danger:#f75842;
+    --color-danger-varient:rgba(247,88,66,0,0.4);
+    --color-white:#fff;
+    --color-light:rgba(255,255,255,.7);
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+    --transition:all 400ms ease;
+    
+}
+
+.contact-section .contact__container
+{
+    padding: 4rem ;
+    background-color: var(--color-bg1);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 3rem;
+    height: 30rem;
+    margin: 14rem auto;
+    border-radius: 1rem;
+
+}
+.contact-section .contact__container aside 
+{
+    background-color: var(--color-primary);
+    padding: 3rem;
+    border-radius: 3rem;
+    position: relative;
+    bottom:  10rem;
+}
+.contact-section .contact__container aside img 
+{
+    width: 12rem;
+    height: 12rem;
+}
+
+.contact-section .contact__container aside h2 
+{
+    margin: 1rem  0 2rem;
+}
+.contact-section .contact__container aside p 
+{
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+.contact-section .contact__container aside .icon 
+{
+    margin-bottom: 2rem;
+}
+.contact-section .contact__container aside .icon i{
+    margin-right: 1rem;
+}
+
+.contact-section .contact__container aside .social-icon
+{
+    display: flex;
+    align-items: center;
+}
+.contact-section .contact__container aside .social-icon i 
+{
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.contact-section .contact__container aside .social-icon i:hover{
+    background-color: var(--color-bg2);
+
+} 
+
+.contact-section .contact__container form
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 3rem  9rem 3rem;
+    gap:1rem
+}
+.contact-section .contact__container form input[type="email"],
+.contact-section .contact__container form textarea
+
+{
+    grid-column: 1 / span 2;
+}
+
+.contact-section .contact__container form input[type="submit"]
+{
+    grid-column: 2/span 1;
+}
+
+.contact-section .contact__container form input:not(input[type="submit"]),
+.contact-section .contact__container form textarea
+{
+    background-color: var(--color-bg);
+    border: none;
+    color: var(--color-white);
+    padding: 1rem 0 1rem 1rem;
+}
+.contact-section .contact__container form input:not(input[type="submit"]):focus,
+.contact-section .contact__container form textarea:focus
+{
+    outline: none;
+}
+
+@media (max-width:1024px)
+{
+    .contact-section .contact__container
+    {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .contact-section .contact__container aside
+    {
+        bottom: 0;
+    }
+}
+@media (max-width:600px)
+{
+    .contact-section .contact__container
+    {
+        padding: 4rem 0
+    }
+    .contact-section .contact__container form
+    {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;  
+    }
+}
